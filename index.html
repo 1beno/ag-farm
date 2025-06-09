@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Peternakan Kambing Agus Gabriel - Kambing Berkualitas dari Maluku Barat
+      Daya
+    </title>
+    <meta
+      name="description"
+      content="Peternakan Kambing Agus Gabriel menyediakan Kambing Potong, Kambing Bibitan, dan Pupuk Kandang Alami berkualitas tinggi di Kabupaten Maluku Barat Daya, Maluku. Hubungi kami untuk kebutuhan bibit, susu, dan daging kambing terbaik."
+    />
+    <meta
+      name="keywords"
+      content="kambing, peternakan kambing, Kambing Potong, Kambing Bibitan, Pupuk Kandang Alami, maluku barat daya, maluku, bibit kambing, susu kambing, daging kambing, jual kambing"
+    />
+    <meta name="author" content="Agus Gabriel" />
+
+    <!-- Open Graph / Facebook / WhatsApp SEO -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.peternakankambingagusgabriel.com/"
+    />
+    <!-- Ganti dengan URL website Anda -->
+    <meta
+      property="og:title"
+      content="Peternakan Kambing Agus Gabriel - Kambing Berkualitas dari Maluku Barat Daya"
+    />
+    <meta
+      property="og:description"
+      content="Peternakan Kambing Agus Gabriel menyediakan Kambing Potong, Kambing Bibitan, dan Pupuk Kandang Alami berkualitas tinggi di Kabupaten Maluku Barat Daya, Maluku."
+    />
+    <meta property="og:image" content="public/assets/img/logo.png" />
+    <!-- Ganti dengan URL gambar logo atau hero Anda -->
+    <meta
+      property="og:image:alt"
+      content="Logo Peternakan Kambing Agus Gabriel"
+    />
+    <meta property="og:site_name" content="Peternakan Kambing Agus Gabriel" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Xicon -->
+    <link rel="icon" type="image/x-icon" href="public/assets/img/logo.png" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Custom styles for the map iframe to ensure responsiveness */
+      .map-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 1rem; /* rounded-xl */
+      }
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .nav-active {
+        border-bottom: 3px solid #059669; /* emerald-700 */
+        color: #059669 !important;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-green-50 to-emerald-100 text-gray-800 antialiased"
+  >
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-xl">
+      <nav class="flex items-center justify-between container mx-auto px-4">
+        <a href="#beranda">
+          <!-- <div class="text-2xl font-bold text-emerald-700">
+            Peternakan Kambing Agus Gabriel
+          </div> -->
+          <img
+            src="public/assets/img/logo1.png"
+            alt="Logo Peternakan Kambing Agus Gabriel"
+            class="h-10 w-auto md:h-12"
+          />
+        </a>
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="#beranda"
+            data-nav="beranda"
+            class="text-gray-600 hover:text-emerald-700 font-semibold transition duration-300"
+            >Beranda</a
+          >
+          <a
+            href="#tentang-kami"
+            data-nav="tentang-kami"
+            class="text-gray-600 hover:text-emerald-700 font-semibold transition duration-300"
+            >Tentang Kami</a
+          >
+          <a
+            href="#produk"
+            data-nav="produk"
+            class="text-gray-600 hover:text-emerald-700 font-semibold transition duration-300"
+            >Produk</a
+          >
+          <a
+            href="#galeri"
+            data-nav="galeri"
+            class="text-gray-600 hover:text-emerald-700 font-semibold transition duration-300"
+            >Galeri</a
+          >
+          <a
+            href="#testimoni"
+            data-nav="testimoni"
+            class="text-gray-600 hover:text-emerald-700 font-semibold transition duration-300"
+            >Testimoni</a
+          >
+          <a
+            href="#kontak"
+            data-nav="kontak"
+            class="text-gray-600 hover:text-emerald-700 font-semibold transition duration-300"
+            >Kontak</a
+          >
+        </div>
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-600 hover:text-emerald-700 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu (Hidden by default) -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white mt-2 p-4 rounded-xl shadow-lg"
+      >
+        <a
+          href="#beranda"
+          class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+          >Beranda</a
+        >
+        <a
+          href="#tentang-kami"
+          class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+          >Tentang Kami</a
+        >
+        <a
+          href="#produk"
+          class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+          >Produk</a
+        >
+        <a
+          href="#galeri"
+          class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+          >Galeri</a
+        >
+        <a
+          href="#testimoni"
+          class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+          >Testimoni</a
+        >
+        <a
+          href="#kontak"
+          class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+          >Kontak</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="beranda"
+        class="relative bg-gradient-to-r from-emerald-600 to-green-700 text-white py-20 md:py-32 rounded-b-3xl shadow-xl overflow-hidden"
+      >
+        <!-- Video Background -->
+        <div class="absolute inset-0 z-0">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover"
+            style="opacity: 0.25"
+          >
+            <source
+              src="public/assets/video/Video_Latar_Belakang.mp4"
+              type="video/mp4"
+            />
+            <!-- Fallback jika video tidak didukung -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            <span class="text-yellow-300">Peternakan Kambing Agus Gabriel</span
+            ><br />Kualitas Terbaik dari Maluku Barat Daya
+          </h1>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 opacity-90">
+            Kami berkomitmen menyediakan kambing sehat dan berkualitas tinggi
+            untuk kebutuhan bibit dan daging Anda.
+          </p>
+          <a
+            href="#kontak"
+            class="inline-block bg-white text-emerald-700 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300 ease-in-out"
+          >
+            Hubungi Kami Sekarang
+          </a>
+        </div>
+      </section>
+
+      <!-- Tentang Kami (About Us) Section -->
+      <section
+        id="tentang-kami"
+        class="py-16 md:py-24 bg-white rounded-3xl shadow-lg -mt-16 mx-4 md:mx-auto max-w-6xl relative z-20"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Tentang Peternakan Kami
+          </h2>
+          <div class="md:flex md:items-center md:space-x-8">
+            <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center items-center">
+              <img
+                src="public/assets/img/owner.png"
+                alt="Kandang Peternakan Agus Gabriel"
+                class="rounded-xl shadow-lg w-full max-w-md h-auto object-cover aspect-[4/3]"
+                style="max-height: 350px"
+              />
+            </div>
+            <div class="md:w-1/2 text-left">
+              <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                Peternakan Kambing Agus Gabriel telah berdiri sejak tahun 2011
+                dengan semangat untuk menyediakan kambing berkualitas terbaik di
+                Kabupaten Maluku Barat Daya, Maluku. Kami fokus pada kesehatan
+                dan kesejahteraan hewan, memastikan setiap kambing tumbuh
+                optimal dengan pakan alami dan perawatan yang profesional.
+              </p>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                Kami percaya bahwa kualitas adalah kunci. Oleh karena itu, kami
+                menerapkan standar tinggi dalam pemeliharaan, mulai dari
+                pemilihan bibit unggul, manajemen pakan, hingga sanitasi
+                kandang. Visi kami adalah menjadi peternakan kambing terdepan
+                yang berkontribusi pada kemajuan sektor peternakan di Maluku.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Produk Section -->
+      <section id="produk" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Produk Kami
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Kambing Potong -->
+            <div
+              class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-amber-500 transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <img
+                src="public/assets/img/galery/39.jpg"
+                alt="Kambing Potong"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-2xl font-semibold mb-3 text-gray-900">
+                Kambing Potong
+              </h3>
+              <p class="text-gray-700">
+                Kambing pilihan untuk konsumsi daging, sehat, bertubuh besar,
+                dan siap potong. Cocok untuk kebutuhan aqiqah, kurban, atau
+                konsumsi harian.
+              </p>
+            </div>
+            <!-- Kambing Bibitan -->
+            <div
+              class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-gray-500 transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <img
+                src="public/assets/img/galery/21.jpg"
+                alt="Kambing Bibitan"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-2xl font-semibold mb-3 text-gray-900">
+                Kambing Bibitan
+              </h3>
+              <p class="text-gray-700">
+                Kambing bibitan unggul untuk pembiakan, sehat, produktif, dan
+                siap dikembangkan. Cocok untuk meningkatkan populasi dan
+                kualitas ternak Anda.
+              </p>
+            </div>
+            <!-- Pupuk Kandang Alami -->
+            <div
+              class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-red-500 transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <img
+                src="public/assets/img/galery/12.jpg"
+                alt="Pupuk Kandang Alami"
+                class="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+              <h3 class="text-2xl font-semibold mb-3 text-gray-900">
+                Pupuk Kandang Alami
+              </h3>
+              <p class="text-gray-700">
+                Pupuk organik dari kotoran kambing, kaya nutrisi untuk tanaman
+                dan ramah lingkungan. Cocok untuk pertanian, kebun, dan
+                meningkatkan kesuburan tanah.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeri (Gallery) Section -->
+      <section
+        id="galeri"
+        class="py-16 md:py-24 bg-gray-100 rounded-3xl shadow-inner mx-4 md:mx-auto max-w-6xl"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Galeri Peternakan Kami
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="overflow-hidden rounded-xl shadow-lg group">
+              <img
+                src="public/assets/img/galery/01.jpg"
+                alt="Kandang Peternakan Bersih"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300 cursor-pointer"
+              />
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg group">
+              <img
+                src="public/assets/img/galery/14.jpg"
+                alt="Kambing Sehat di Peternakan"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300 cursor-pointer"
+              />
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg group">
+              <img
+                src="public/assets/img/galery/19.jpg"
+                alt="Anak Kambing Lucu"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300 cursor-pointer"
+              />
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg group">
+              <img
+                src="public/assets/img/galery/36.jpg"
+                alt="Pemberian Pakan Kambing"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300 cursor-pointer"
+              />
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg group">
+              <img
+                src="public/assets/img/galery/05.jpg"
+                alt="Perawatan Kambing"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300 cursor-pointer"
+              />
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg group">
+              <img
+                src="public/assets/img/galery/09.jpg"
+                alt="Pemandangan Peternakan"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300 cursor-pointer"
+              />
+            </div>
+          </div>
+          <!-- Modal Lightbox -->
+          <div
+            id="lightbox-modal"
+            class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
+          >
+            <span
+              id="lightbox-close"
+              class="absolute top-6 right-8 text-white text-5xl cursor-pointer select-none"
+              >&times;</span
+            >
+            <img
+              id="lightbox-img"
+              src=""
+              alt="Galeri"
+              class="max-h-[80vh] max-w-[80vw] rounded-2xl shadow-2xl border-4 border-white"
+              style="
+                width: auto;
+                height: auto;
+                max-width: 80vw;
+                max-height: 80vh;
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimoni (Testimonials) Section -->
+      <section id="testimoni" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Apa Kata Pelanggan Kami?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-emerald-500"
+            >
+              <p class="text-lg text-gray-700 italic mb-6">
+                "Kambing Potong dari Peternakan Agus Gabriel sangat berkualitas,
+                susunya melimpah dan sehat. Pelayanan sangat ramah dan
+                profesional!"
+              </p>
+              <p class="font-semibold text-emerald-700">- Ibu Siti, Ambon</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-emerald-500"
+            >
+              <p class="text-lg text-gray-700 italic mb-6">
+                "Saya membeli Kambing Bibitan untuk pembibitan, dan hasilnya
+                sangat memuaskan. Kambingnya sehat, lincah, dan cepat beranak."
+              </p>
+              <p class="font-semibold text-emerald-700">
+                - Bapak Budi, Saumlaki
+              </p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-emerald-500"
+            >
+              <p class="text-lg text-gray-700 italic mb-6">
+                "Peternakan ini sangat direkomendasikan. Kami mendapatkan Pupuk
+                Kandang Alami dengan kualitas daging terbaik untuk acara
+                keluarga."
+              </p>
+              <p class="font-semibold text-emerald-700">
+                - Keluarga Wibowo, Jakarta
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontak (Contact) Section -->
+      <section
+        id="kontak"
+        class="py-16 md:py-24 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-xl mx-4 md:mx-auto max-w-6xl shadow-xl mb-12"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12">Hubungi Kami</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+            <!-- Contact Form -->
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">
+                Kirim Pesan kepada Kami
+              </h3>
+              <form id="contact-form" class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium mb-2"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full p-3 rounded-lg bg-emerald-700 border border-emerald-600 text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                  />
+                  <p id="name-error" class="text-red-300 text-sm mt-1 hidden">
+                    Nama tidak boleh kosong.
+                  </p>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full p-3 rounded-lg bg-emerald-700 border border-emerald-600 text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                  />
+                  <p id="email-error" class="text-red-300 text-sm mt-1 hidden">
+                    Email tidak valid atau kosong.
+                  </p>
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium mb-2"
+                    >Pesan Anda</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full p-3 rounded-lg bg-emerald-700 border border-emerald-600 text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                  ></textarea>
+                  <p
+                    id="message-error"
+                    class="text-red-300 text-sm mt-1 hidden"
+                  >
+                    Pesan tidak boleh kosong.
+                  </p>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-white text-emerald-700 px-6 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-gray-100 transform hover:scale-105 transition duration-300 ease-in-out"
+                >
+                  Kirim Pesan
+                </button>
+                <p
+                  id="form-status"
+                  class="text-yellow-200 text-sm mt-4 hidden text-center"
+                ></p>
+              </form>
+            </div>
+
+            <!-- Contact Info & Map -->
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">
+                Informasi Kontak & Lokasi
+              </h3>
+              <p class="text-lg mb-4 flex items-center">
+                <svg
+                  class="w-6 h-6 mr-3 text-yellow-300"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                Jalan Raya Utama, Pantai Nama, Desa Wonreli, Kec. Kisar Selatan,
+                Kabupaten Maluku Barat Daya, Maluku
+              </p>
+              <p class="text-lg mb-4 flex items-center">
+                <svg
+                  class="w-6 h-6 mr-3 text-yellow-300"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                  ></path>
+                </svg>
+                +62 821-9091-9659
+                <!-- Ganti dengan nomor WhatsApp Anda -->
+              </p>
+              <p class="text-lg mb-6 flex items-center">
+                <svg
+                  class="w-6 h-6 mr-3 text-yellow-300"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                  ></path>
+                  <path
+                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                  ></path>
+                </svg>
+                info@peternakankambingagusgabriel.com
+                <!-- Ganti dengan email Anda -->
+              </p>
+
+              <div class="map-container rounded-xl shadow-lg">
+                <!-- Ganti src dengan embed kode Google Maps lokasi peternakan Anda -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.7925046690766!2d127.15040799999998!3d-8.078238299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d02cffb3189427d%3A0x616baf7d7e2a5db6!2sPeternakan%20Kambing%20Agus%20Gabriel!5e1!3m2!1sen!2sid!4v1749406633064!5m2!1sen!2sid"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/6281234567890"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center space-x-2 hover:bg-green-600 transform hover:scale-110 transition-transform duration-300 z-50"
+    >
+      <img
+        src="public/assets/img/whatsapp.png"
+        alt="WhatsApp"
+        class="w-8 h-8"
+      />
+      <span class="font-semibold text-lg">WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 rounded-t-3xl">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-400">
+          &copy; 2025 Peternakan Kambing Agus Gabriel. Hak Cipta Dilindungi.
+        </p>
+        <div class="mt-4 text-sm">
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Kebijakan Privasi</a
+          >
+          <span class="text-gray-600">|</span>
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Syarat dan Ketentuan</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Navbar Active Link on Scroll
+      const navLinks = document.querySelectorAll("nav a[data-nav]");
+      const sections = Array.from(navLinks).map((link) =>
+        document.getElementById(link.getAttribute("href").replace("#", ""))
+      );
+
+      function setActiveNav() {
+        let index = sections.length - 1;
+        for (let i = 0; i < sections.length; i++) {
+          const rect = sections[i].getBoundingClientRect();
+          if (rect.top <= 80) index = i;
+        }
+        navLinks.forEach((link, i) => {
+          if (i === index) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+      window.addEventListener("scroll", setActiveNav);
+      window.addEventListener("DOMContentLoaded", setActiveNav);
+      // ...existing code...
+
+      // Lightbox Galeri
+      document.querySelectorAll("#galeri img").forEach(function (img) {
+        img.addEventListener("click", function () {
+          document.getElementById("lightbox-img").src = this.src;
+          document.getElementById("lightbox-modal").classList.remove("hidden");
+        });
+      });
+      document.getElementById("lightbox-close").onclick = function () {
+        document.getElementById("lightbox-modal").classList.add("hidden");
+        document.getElementById("lightbox-img").src = "";
+      };
+      // Tutup modal jika klik di luar gambar
+      document
+        .getElementById("lightbox-modal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            this.classList.add("hidden");
+            document.getElementById("lightbox-img").src = "";
+          }
+        });
+
+      // JavaScript for Mobile Menu Toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // JavaScript for Contact Form Validation
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          const nameInput = document.getElementById("name");
+          const emailInput = document.getElementById("email");
+          const messageInput = document.getElementById("message");
+          const formStatus = document.getElementById("form-status");
+
+          let isValid = true;
+
+          // Clear previous error messages
+          document.getElementById("name-error").classList.add("hidden");
+          document.getElementById("email-error").classList.add("hidden");
+          document.getElementById("message-error").classList.add("hidden");
+          formStatus.classList.add("hidden");
+          formStatus.textContent = "";
+          formStatus.classList.remove("text-green-300", "text-red-300");
+
+          // Validate Name
+          if (nameInput.value.trim() === "") {
+            document.getElementById("name-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Validate Email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (
+            emailInput.value.trim() === "" ||
+            !emailRegex.test(emailInput.value.trim())
+          ) {
+            document.getElementById("email-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Validate Message
+          if (messageInput.value.trim() === "") {
+            document.getElementById("message-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          if (isValid) {
+            // In a real application, you would send this data to a server
+            // using Fetch API or XMLHttpRequest.
+            // For this example, we'll just simulate a successful submission.
+            formStatus.textContent =
+              "Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.";
+            formStatus.classList.remove("hidden");
+            formStatus.classList.add("text-green-300");
+
+            // Clear the form
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+
+            console.log("Form Submitted (client-side):", {
+              name: nameInput.value,
+              email: emailInput.value,
+              message: messageInput.value,
+            });
+          } else {
+            formStatus.textContent = "Mohon periksa kembali isian form Anda.";
+            formStatus.classList.remove("hidden");
+            formStatus.classList.add("text-red-300");
+          }
+        });
+    </script>
+  </body>
+</html>
